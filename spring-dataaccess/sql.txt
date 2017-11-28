@@ -1,0 +1,22 @@
+CREATE SCHEMA `manage_student` ;
+
+use manage_student;
+
+CREATE TABLE `manage_student`.`student_tbl` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(150) NOT NULL,
+  `gender` INT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC));
+
+  INSERT INTO `manage_student`.`student_tbl` (`id`, `name`, `email`, `gender`) VALUES ('1', 'vanvtt', 'vanvtt@gamil.com', '1');
+  
+  
+  // Address_tbl table
+  CREATE TABLE `manage_student`.`Address_tbl` (
+  `id` INT NOT NULL,
+  `street` VARCHAR(150) NOT NULL,
+  `city` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`));
+  
