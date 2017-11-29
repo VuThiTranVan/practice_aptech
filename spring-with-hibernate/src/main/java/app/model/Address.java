@@ -1,5 +1,14 @@
 package app.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Address_tbl")
 public class Address {
 	private int id;
 	private String street;
@@ -23,6 +32,9 @@ public class Address {
 		this.city = city;
 	}
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", unique = true, nullable = false)
 	public int getId() {
 		return id;
 	}
@@ -31,6 +43,7 @@ public class Address {
 		this.id = id;
 	}
 
+	@Column(name = "street", length = 150)
 	public String getStreet() {
 		return street;
 	}
@@ -39,6 +52,7 @@ public class Address {
 		this.street = street;
 	}
 
+	@Column(name = "city", length = 100)
 	public String getCity() {
 		return city;
 	}

@@ -16,7 +16,7 @@
 	<import resource="spring-datasource.xml" />
 
 	<!-- DAO -->
-	<bean id="StudentDAO" class="app.dao.StudentDAOImpl">
+	<bean id="studentDAO" class="app.dao.StudentDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
@@ -24,7 +24,7 @@
 	<bean id="studentService" parent="transactionProxyTemplate">
 		<property name="target">
 			<bean class="app.service.StudentServiceImpl">
-				<property name="studentDAO" ref="StudentDAO"></property>
+				<property name="studentDAO" ref="studentDAO"></property>
 			</bean>
 		</property>
 	</bean>
