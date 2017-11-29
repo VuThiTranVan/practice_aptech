@@ -13,9 +13,20 @@ public class AppMain {
 
 		StudentService studentService = (StudentService) context.getBean("studentService");
 
-		Student stNew = new Student("vanv", "van101@gmail.com", 1);
+//		Student stNew = new Student("v01", "v110@gmail.com", 1);
+//		System.out.println(studentService.createStudent(stNew));
+		
+		Student st = studentService.findById(2);
+		System.out.println("\t id: " + st.getId());
 
-		System.out.println(studentService.createStudent(stNew));
+		// Student stUpdate = new Student(4, "update Name", "update@gmail.com",
+		// 0);
+		// System.out.println(studentService.updateStudent(stUpdate));
+
+		// Student stDelete = new Student(2, "update Name", "update@gmail.com",
+		// 0);
+		// System.out.println(studentService.deleteStudent(stDelete));
+
 	}
 
 }

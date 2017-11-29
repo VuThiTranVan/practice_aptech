@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="student_tbl")
 public class Student {
-	private int id;
+	private Integer id;
 	private String name;
 	private String email;
 	private int gender;
@@ -37,7 +37,7 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 

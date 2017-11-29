@@ -16,7 +16,8 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/manage_student?useSSL=false" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/manage_student?useSSL=false" />
 		<property name="username" value="root" />
 		<property name="password" value="123456" />
 
@@ -63,6 +64,10 @@
 				<prop key="insert*">PROPAGATION_REQUIRED</prop>
 				<prop key="update*">PROPAGATION_REQUIRED</prop>
 				<prop key="edit*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="findBy*">PROPAGATION_REQUIRED</prop>
+				<prop key="getFindBy*">PROPAGATION_REQUIRED</prop>
+
 				<prop key="*">PROPAGATION_SUPPORTS</prop>
 			</props>
 		</property>
