@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="student_tbl")
+@Table(name = "student_tbl")
 public class Student {
 	private Integer id;
 	private String name;
@@ -44,7 +44,7 @@ public class Student {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	@Column(name = "name", length = 50)
 	public String getName() {
 		return name;
@@ -70,6 +70,16 @@ public class Student {
 
 	public void setGender(int gender) {
 		this.gender = gender;
+	}
+
+	public void display() {
+		System.out.println("Sudent Infor:");
+		System.out.println("\t Id: " + getId());
+		System.out.println("\t Name: " + getName());
+		System.out.println("\t Email: " + getEmail());
+		System.out.println("\t Gender: " + getGender());
+		System.out.println("**** =++++= ****");
+
 	}
 
 }

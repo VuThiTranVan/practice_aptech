@@ -54,4 +54,9 @@ public class StudentServiceImpl implements StudentService {
 	public void setStudentDAO(StudentDAO studentDAO) {
 		this.studentDAO = studentDAO;
 	}
+
+	@Override
+	public Student findByEmail(String email) {
+		return studentDAO.findByEmail(email);
+	}
 }

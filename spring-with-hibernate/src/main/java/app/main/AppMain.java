@@ -15,16 +15,19 @@ public class AppMain {
 		Student st = studentService.findById(4);
 		System.out.println("Id: " + st.getId());
 		
-//		Student stNew = new Student("vanv5", "van11@gmail.com", 1);
+//		Student stNew = new Student("van1", "van1@gmail.com", 1);
 //
 //		System.out.println(studentService.createStudent(stNew));
 
-		Student stUpdate = new Student(4, "update Name", "update@gmail.com", 0);
-		System.out.println(studentService.updateStudent(stUpdate));
+//		Student stUpdate = new Student(4, "update Name", "update@gmail.com", 0);
+//		System.out.println(studentService.updateStudent(stUpdate));
 		
 //		Student stDelete = new Student(2, "update Name", "update@gmail.com", 0);
 //		System.out.println(studentService.deleteStudent(stDelete));
-
+		
+		// practice HQL query
+		Student stByEmail = studentService.findByEmail("update@gmail.com");
+		stByEmail.display();
 	}
 
 }

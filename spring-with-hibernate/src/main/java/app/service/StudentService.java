@@ -7,4 +7,7 @@ public interface StudentService {
 	boolean createStudent(Student st);
 	boolean updateStudent(Student st);
 	boolean deleteStudent(Student st);
+	
+	// Using HQL
+	Student findByEmail(String email);
 }
