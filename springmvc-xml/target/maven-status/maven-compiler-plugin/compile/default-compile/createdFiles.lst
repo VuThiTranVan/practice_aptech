@@ -1,0 +1,8 @@
+app/model/Student.class
+app/dao/StudentDAO.class
+app/dao/IGenericDAO.class
+app/dao/GenericDAO.class
+app/controller/StudentController.class
+app/service/StudentService.class
+app/dao/StudentDAOImpl.class
+app/service/StudentServiceImpl.class
